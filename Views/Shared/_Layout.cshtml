@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SalvandoHuellas</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container ">
+                <a class="navbar-brand  text-primary font-weight-bolder"  asp-controller="Pets"
+                    asp-action="Index">SalvandoHuellas</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Pets" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Pets"
+                                asp-action="Contactanos">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class=>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="  text-muted mt-5 bg-warning">
+        <div class="pie-info">
+            <span class="text-center mb-5">Nuestras redes sociales:</span>
+            <div class="redes d-flex justify-content-around">
+                <a class="icon p-3"  href="https://www.instagram.com/">
+                    <span  class="fa fa-instagram  fa-5x"></span>
+                </a>
+                <a class="icon p-3"  href="https://www.facebook.com/">
+                    <span  class="fa fa-facebook  fa-5x"></span>
+                </a>
+                <a class="icon p-3"  href="https://www.whatsapp.com/">
+                    <span  class="fa fa-whatsapp  fa-5x"></span>
+                </a>
+                <a class="icon p-3"  href="https://www.whatsapp.com/">
+                    <span  class="fa fa-youtube  fa-5x"></span>
+                </a>
+            </div>
+            <div class="bg-dark text-white">
+            &copy; 2021 - SalvandoHuellas - Donado por SoftSystem 
+        </div>
+        </div>
+        
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
